@@ -1,0 +1,88 @@
+###
+POST http://localhost:5000/api/auth/register  HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test@test.com",
+    "password":"Test1234!"
+}
+###
+POST http://localhost:5000/api/auth/login  HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test@test.com",
+    "password":"Test1234!"
+}
+###
+GET  http://localhost:5000/api/movies HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5Mzg4MzMxNSwiZXhwIjoxNjkzODg2OTE1fQ.5yqUH9ypsDKRwLTWWkBPLCOnqNzVW1Oi2o2f_4cr7yA
+Content-Type: application/json
+
+{
+    "title":"Título de la películaAAAA",
+    "director":"Director de la película",
+    "releaseYear":2023,
+    "genre":"Género de la película"
+}
+###
+GET http://localhost:5000/api/movies/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5Mzg4MDAyOCwiZXhwIjoxNjkzODgzNjI4fQ.E5FG-b8VzJgV7nMaiERWj1gNfgOpH5h2ewBKqm-Ybq8
+Content-Type: application/json
+
+{
+
+}
+
+###
+POST http://vercel-typescript-express-api-fawn.vercel.app/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "0@test.cl",
+    "password": "test1234"
+}
+
+###
+PATCH http://localhost:3000/api/users/avatar HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDhmM2ExMDljZjFhNDg0ZmZkZTNmZjgiLCJpYXQiOjE2ODcxMDgxMzJ9.XtCvnNRLAhkTUnGY6v-jp3BbU8gL49UZgDbkrzFX2Qs
+Content-Type: application/json
+
+{
+  "avatarPath": "ruta/al/avatar.jpg"
+}
+
+###
+PATCH http://localhost:3000/api/advance/641c906388ff5ffc4d813aa0/numero_transiciones_conocimiento_bajo HTTP/1.1
+Content-Type: application/json
+
+{
+    "641c906388ff5ffc4d813aa0":"1,0,0,0,0,0,0,0,0,0"
+}
+
+###
+PATCH http://localhost:3000/api/users/password HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDg0YTVmZTlmY2FjYTdhN2FhNjhjNzQiLCJpYXQiOjE2ODY0NDg0MDJ9.lsgNRyw6EU8plFXoVMpGgWakArs-Q9F7z1-7QXdPqrA
+Content-Type: application/json
+
+{
+    "newPassword":"test1234"
+}
+
+###
+GET http://localhost:3000/api/users/check-email/t@test.cl HTTP/1.1
+Content-Type: application/json
+ 
+
+Content-Type: application/json
+
+###
+GET https://dle.rae.es/srv/search?w={hola} HTTP/1.1
+Content-Type: application/json
+
+###
+GET https://dle.rae.es/data/anagram?w=amor HTTP/1.1
+Content-Type: application/json
+
+
+//https://coix-my.sharepoint.com/:f:/g/personal/pupoxws_coix_onmicrosoft_com/Eor3mCD0jZ1BkW6GS_VHUFIBpc735KVb9qEltSb38DJfaQ?e=Q24FS7

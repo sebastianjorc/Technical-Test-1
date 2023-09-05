@@ -1,0 +1,24 @@
+version: '3'  # Asegúrate de utilizar la versión adecuada de Docker Compose
+
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: movie_app
+    ports:
+      - '3306:3306'
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mariadb  # El nombre del servicio de la base de datos
+      PMA_USER: root
+      PMA_PASSWORD: root_password
+    ports:
+      - '8080:80'  # Puedes mapear el puerto 8080 de tu sistema al puerto 80 del contenedor de phpMyAdmin
+
+volumes:
+  mariadb_data:
